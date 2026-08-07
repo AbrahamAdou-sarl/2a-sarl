@@ -66,7 +66,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.85)), url('45304.jpg') center/cover;
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.85)), url('45304.jpeg') center/cover;
             height: 75vh;
             display: flex;
             align-items: center;
@@ -111,7 +111,6 @@
             margin-bottom: 30px;
         }
 
-        /* Grille Principale (Secteurs phares avec visuels) */
         .services-grid-featured {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -143,7 +142,6 @@
             font-size: 1.1rem;
         }
 
-        /* Grille Secondaire (Autres secteurs statutaires) */
         .services-grid-secondary {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -152,4 +150,164 @@
 
         .sub-service-card {
             background-color: var(--light-bg);
-            border-left: 4px solid
+            border-left: 4px solid var(--accent-red);
+            padding: 15px 20px;
+            border-radius: 4px;
+        }
+
+        .sub-service-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .legal-box {
+            background-color: var(--light-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; }
+            nav ul { margin-top: 10px; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <img src="45105.jpg" alt="Logo 2A SARL" class="logo-img">
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#secteurs">Nos 11 Secteurs</a></li>
+                    <li><a href="#entreprise">L'Entreprise</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Bannière Principale -->
+    <div id="accueil" class="hero">
+        <div>
+            <h1>ABRAHAM ADOU SARL (2A SARL)</h1>
+            <p>Votre partenaire multisectoriel de référence en Côte d'Ivoire</p>
+            <a href="#contact" class="btn">Demander un Devis / Contact</a>
+        </div>
+    </div>
+
+    <!-- Nos 11 Domaines d'Activités -->
+    <section id="secteurs">
+        <h2 class="section-title">Nos Domaines d'Activité</h2>
+        
+        <div class="services-grid-featured">
+            <div class="service-card">
+                <img src="45099.jpg" alt="Exploration et Exploitation Minière">
+                <div class="service-card-body">
+                    <h3>1. Exploration & Exploitation Minière</h3>
+                    <p>Recherche et exploitation artisanale, semi-industrielle et industrielle des ressources minérales.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="46098.jpg" alt="BTP et Construction">
+                <div class="service-card-body">
+                    <h3>2. BTP & Construction</h3>
+                    <p>Génie civil, réalisation d'ouvrages publics, bâtiments et infrastructures d'envergure.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="45097.jpg" alt="Commerce et Logistique">
+                <div class="service-card-body">
+                    <h3>3. Commerce Général & Industrie</h3>
+                    <p>Activités commerciales globales, achat-vente et prestations de services industriels.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="45096.jpg" alt="Communication et Réseaux">
+                <div class="service-card-body">
+                    <h3>4. Communication & Réseaux</h3>
+                    <p>Stratégies de communication globale, médias et déploiement d'activités connexes.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="color: var(--primary-blue); margin-bottom: 20px; text-align: center;">Nos Autres Secteurs d'Expertise</h3>
+        
+        <div class="services-grid-secondary">
+            <div class="sub-service-card">
+                <h4>🌱 5. Activité Agro-Pastorale</h4>
+                <p>Développement de projets agricoles (culture) et d'élevage professionnel à forte valeur ajoutée.</p>
+            </div>
+
+            <div class="sub-service-card">
+                <h4>🎓 6. Formation Professionnelle</h4>
+                <p>Renforcement de capacités et programmes de formation technique et métier.</p>
+            </div>
+
+            <div class="sub-service-card">
+                <h4>🚚 7. Transit, Transports & Logistique</h4>
+                <p>Opérations de transit en douane, acheminement fret et gestion de la chaîne logistique.</p>
+            </div>
+
+            <div class="sub-service-card">
+                <h4>☕ 8. Négoce de Café & Cacao</h4>
+                <p>Achat, collecte, conditionnement et commercialisation des matières premières agricoles.</p>
+            </div>
+
+            <div class="sub-service-card">
+                <h4>⚡ 9. Énergie Industrielle</h4>
+                <p>Fourniture de solutions, équipements et prestations de services liées au secteur de l'énergie.</p>
+            </div>
+
+            <div class="sub-service-card">
+                <h4>🚰 10. Forage & Eau Minérale</h4>
+                <p>Travaux d'ingénierie hydraulique, forages d'eau et unités d'emballage d'eau minérale.</p>
+            </div>
+
+            <div class="sub-service-card">
+                <h4>🏢 11. Immobilier</h4>
+                <p>Achat, vente, location et gestion de biens immobiliers et promotion foncière.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informations Légales -->
+    <section id="entreprise">
+        <h2 class="section-title">Informations Légales & Siège</h2>
+        <div class="legal-box">
+            <p><strong>Dénomination :</strong> ABRAHAM ADOU SARL (2A SARL)</p>
+            <p><strong>Capital Social :</strong> 5 000 000 F CFA</p>
+            <p><strong>IDU (Immatriculation Unique) :</strong> CI-2026-0057409 J</p>
+            <p><strong>RCCM :</strong> CI-ABJ-03-2026-B12-01853</p>
+            <p><strong>Siège Social :</strong> Abidjan Abobo N'Dotré Anonkoua, près du Camp ONUCI (Lot 1694 - Ilot 184)</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="text-align: center;">
+        <h2 class="section-title">Contactez-nous</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Téléphones :</strong> +225 07 16 01 78 87 / +225 05 45 46 08 88</p>
+        <p style="font-size: 1.1rem; margin-bottom: 20px;"><strong>E-mail :</strong> 2asarl@gmail.com / missionmondialesion@gmail.com</p>
+        <a href="https://wa.me/2250716017887" class="btn" style="background-color: #25D366;">Discuter sur WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ABRAHAM ADOU SARL (2A SARL) - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
