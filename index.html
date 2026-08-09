@@ -1,313 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABRAHAM ADOU SARL (2A SARL) | Partenaire Multi-Sectoriel Abidjan</title>
-    <meta name="description" content="ABRAHAM ADOU SARL (2A SARL) - Votre partenaire multisectoriel de référence en Côte d'Ivoire : Mines, BTP, Logistique, Énergie, Agriculture et Communication.">
-    
-    <style>
-        :root {
-            --primary-blue: #0d3b66;
-            --accent-red: #d90429;
-            --light-bg: #f8f9fa;
-            --dark-text: #212529;
-            --white: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABRAHAM ADOU SARL (2A SARL) - Site Officiel</title>
+  
+  <style>
+    /* =========================================================
+       STYLES GÉNÉRAUX & VARIABLES
+       ========================================================= */
+    :root {
+      --primary-color: #0d253f;
+      --accent-color: #d4af37;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 15px 35px rgba(13, 37, 63, 0.12);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            color: var(--dark-text);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
 
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px 20px;
-        }
+    .badge {
+      background-color: rgba(212, 175, 55, 0.15);
+      color: #967818;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
 
-        .logo-img {
-            max-height: 50px;
-        }
+    /* =========================================================
+       SECTION : À PROPOS & CONFORMITÉ LÉGALE
+       ========================================================= */
+    .about-section {
+      padding: 80px 0;
+      background-color: #ffffff;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
 
-        nav ul li {
-            margin-left: 20px;
-        }
+    .about-content h2 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 600;
-        }
+    .about-content .lead {
+      font-size: 1.1rem;
+      color: #334155;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
 
-        .hero {
-            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.85)), url('45304.jpeg') center/cover;
-            height: 75vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 20px;
-            margin-top: 70px;
-        }
+    .about-content p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+    .highlights {
+      display: flex;
+      gap: 40px;
+      padding-top: 15px;
+      border-top: 1px solid #e2e8f0;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            color: #e0e0e0;
-        }
+    .highlight-item {
+      display: flex;
+      flex-direction: column;
+    }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-red);
-            color: var(--white);
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    .highlight-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-color);
+    }
 
-        section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .highlight-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: 30px;
-        }
+    .legal-card {
+      background: var(--bg-light);
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 35px 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    }
 
-        .services-grid-featured {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
+    .legal-card h3 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
 
-        .service-card {
-            background-color: var(--white);
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+    .legal-subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+    }
 
-        .service-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
+    .legal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 25px 0;
+    }
 
-        .service-card-body {
-            padding: 18px;
-        }
+    .legal-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed #cbd5e1;
+      font-size: 0.95rem;
+    }
 
-        .service-card h3 {
-            color: var(--primary-blue);
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
+    .legal-list li:last-child {
+      border-bottom: none;
+    }
 
-        .services-grid-secondary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-        }
+    .legal-list .label {
+      color: var(--text-muted);
+      font-weight: 600;
+    }
 
-        .sub-service-card {
-            background-color: var(--light-bg);
-            border-left: 4px solid var(--accent-red);
-            padding: 15px 20px;
-            border-radius: 4px;
-        }
+    .legal-list .value {
+      color: #0f172a;
+      font-weight: 700;
+      text-align: right;
+    }
 
-        .sub-service-card h4 {
-            color: var(--primary-blue);
-            margin-bottom: 5px;
-        }
+    .legal-list .value a {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
 
-        .legal-box {
-            background-color: var(--light-bg);
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 5px solid var(--primary-blue);
-        }
+    .highlight-text {
+      color: var(--accent-color) !important;
+    }
 
-        footer {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            text-align: center;
-            padding: 25px 20px;
-        }
+    .trust-badge {
+      background: rgba(13, 37, 63, 0.05);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
 
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; }
-            nav ul { margin-top: 10px; }
-            .hero h1 { font-size: 1.8rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation -->
-    <header>
-        <div class="nav-container">
-            <img src="45105.jpg" alt="Logo 2A SARL" class="logo-img">
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#secteurs">Nos 11 Secteurs</a></li>
-                    <li><a href="#entreprise">L'Entreprise</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Bannière Principale -->
-    <div id="accueil" class="hero">
-        <div>
-            <h1>ABRAHAM ADOU SARL (2A SARL)</h1>
-            <p>Votre partenaire multisectoriel de référence en Côte d'Ivoire</p>
-            <a href="#contact" class="btn">Demander un Devis / Contact</a>
-        </div>
-    </div>
-
-    <!-- Nos 11 Domaines d'Activités -->
-    <section id="secteurs">
-        <h2 class="section-title">Nos Domaines d'Activité</h2>
-        
-        <div class="services-grid-featured">
-            <div class="service-card">
-                <img src="45099.jpg" alt="Exploration et Exploitation Minière">
-                <div class="service-card-body">
-                    <h3>1. Exploration & Exploitation Minière</h3>
-                    <p>Recherche et exploitation artisanale, semi-industrielle et industrielle des ressources minérales.</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img src="46098.jpg" alt="BTP et Construction">
-                <div class="service-card-body">
-                    <h3>2. BTP & Construction</h3>
-                    <p>Génie civil, réalisation d'ouvrages publics, bâtiments et infrastructures d'envergure.</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img src="45097.jpg" alt="Commerce et Logistique">
-                <div class="service-card-body">
-                    <h3>3. Commerce Général & Industrie</h3>
-                    <p>Activités commerciales globales, achat-vente et prestations de services industriels.</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img src="45096.jpg" alt="Communication et Réseaux">
-                <div class="service-card-body">
-                    <h3>4. Communication & Réseaux</h3>
-                    <p>Stratégies de communication globale, médias et déploiement d'activités connexes.</p>
-                </div>
-            </div>
-        </div>
-
-        <h3 style="color: var(--primary-blue); margin-bottom: 20px; text-align: center;">Nos Autres Secteurs d'Expertise</h3>
-        
-        <div class="services-grid-secondary">
-            <div class="sub-service-card">
-                <h4>🌱 5. Activité Agro-Pastorale</h4>
-                <p>Développement de projets agricoles (culture) et d'élevage professionnel à forte valeur ajoutée.</p>
-            </div>
-
-            <div class="sub-service-card">
-                <h4>🎓 6. Formation Professionnelle</h4>
-                <p>Renforcement de capacités et programmes de formation technique et métier.</p>
-            </div>
-
-            <div class="sub-service-card">
-                <h4>🚚 7. Transit, Transports & Logistique</h4>
-                <p>Opérations de transit en douane, acheminement fret et gestion de la chaîne logistique.</p>
-            </div>
-
-            <div class="sub-service-card">
-                <h4>☕ 8. Négoce de Café & Cacao</h4>
-                <p>Achat, collecte, conditionnement et commercialisation des matières premières agricoles.</p>
-            </div>
-
-            <div class="sub-service-card">
-                <h4>⚡ 9. Énergie Industrielle</h4>
-                <p>Fourniture de solutions, équipements et prestations de services liées au secteur de l'énergie.</p>
-            </div>
-
-            <div class="sub-service-card">
-                <h4>🚰 10. Forage & Eau Minérale</h4>
-                <p>Travaux d'ingénierie hydraulique, forages d'eau et unités d'emballage d'eau minérale.</p>
-            </div>
-
-            <div class="sub-service-card">
-                <h4>🏢 11. Immobilier</h4>
-                <p>Achat, vente, location et gestion de biens immobiliers et promotion foncière.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Informations Légales -->
-    <section id="entreprise">
-        <h2 class="section-title">Informations Légales & Siège</h2>
-        <div class="legal-box">
-            <p><strong>Dénomination :</strong> ABRAHAM ADOU SARL (2A SARL)</p>
-            <p><strong>Capital Social :</strong> 5 000 000 F CFA</p>
-            <p><strong>IDU (Immatriculation Unique) :</strong> CI-2026-0057409 J</p>
-            <p><strong>RCCM :</strong> CI-ABJ-03-2026-B12-01853</p>
-            <p><strong>Siège Social :</strong> Abidjan Abobo N'Dotré Anonkoua, près du Camp ONUCI (Lot 1694 - Ilot 184)</p>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" style="text-align: center;">
-        <h2 class="section-title">Contactez-nous</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Téléphones :</strong> +225 07 16 01 78 87 / +225 05 45 46 08 88</p>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;"><strong>E-mail :</strong> 2asarl@gmail.com / missionmondialesion@gmail.com</p>
-        <a href="https://wa.me/2250716017887" class="btn" style="background-color: #25D366;">Discuter sur WhatsApp</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 ABRAHAM ADOU SARL (2A SARL) - Tous droits réservés.</p>
-    </footer>
-
-</body>
-</html>
+    /* =========================================================
+       SECTION : MOT DU GÉRANT
+       =============
